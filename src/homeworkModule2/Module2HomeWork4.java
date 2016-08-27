@@ -1,4 +1,4 @@
-package homework;
+package homeworkModule2;
 
 public class Module2HomeWork4 {
     static double withdraw(double balance, double withdrawal, double commissionFinal) {
