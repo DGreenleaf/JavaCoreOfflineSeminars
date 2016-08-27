@@ -155,11 +155,11 @@ public class Module2HomeWork1 {
 
     //6 - Находим результат деления по модулю первого и последнего чисел в массиве типа int
 
-    public static long modulus(int[] arrayD) {
+    public static long modulus(int[] array) {
 
         long modulus = 1;
-        long firstNumber = arrayD[0];
-        long lastNumber = arrayD[arrayD.length-1];
+        long firstNumber = array[0];
+        long lastNumber = array[array.length-1];
 
         modulus = firstNumber % lastNumber;
 
