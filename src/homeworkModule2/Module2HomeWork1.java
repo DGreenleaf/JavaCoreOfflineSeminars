@@ -7,25 +7,32 @@ public class Module2HomeWork1 {
     public static void main(String[] args) {
 
         int[] array = {-14, 21, 32, 4, 54, 61, -7, 88, 9, -12};
-        double[] arrayD = {-14, 21, 32, 4, 54, 61, -7, 88, 9, -12};
+        double[] arrayD = {-14.2, 21.5, 32.1, 4.2, 54.9, 61.6, -7.7, 88.5, 9.1, -12.5};
 
 
         System.out.println("Total is " + sum(array));
+        System.out.println("Total is " + sum(arrayD));
 
         System.out.println("Maximum number is " + max(array));
+        System.out.println("Maximum number is " + max(arrayD));
 
         System.out.println("Minimal number is " + min(array));
+        System.out.println("Minimal number is " + min(arrayD));
 
         System.out.println("Maximum positive number is " + maxPositive(array));
+        System.out.println("Maximum positive number is " + maxPositive(arrayD));
 
         System.out.println("Second maximum number after " + max(array) + " is " + secondLargest(array));
+        System.out.println("Second maximum number after " + max(arrayD) + " is " + secondLargest(arrayD));
 
         double multi = multiplication(arrayD);
 
         double mod = modulus(arrayD);
 
+        System.out.println("The result of multiplying of array values is " + multiplication(array));
         System.out.println("The result of multiplying of array values is " + multi);
 
+        System.out.println("The result of modulus operation is " + modulus(array));
         System.out.println("The result of modulus operation is " + mod);
 
 
@@ -44,11 +51,11 @@ public class Module2HomeWork1 {
 
     //1 - Просчитываем сумму элементов массива типа double
 
-    public static double sum(double[] array) {
+    public static double sum(double[] arrayD) {
 
         double sum = 0;
-        for (int i = 0; i < array.length; i++) {
-            sum = sum + array[i];
+        for (int i = 0; i < arrayD.length; i++) {
+            sum = sum + arrayD[i];
         }
         return sum;
     }
@@ -67,12 +74,12 @@ public class Module2HomeWork1 {
 
     //2 - Находим максимальное значение числа в массиве типа double
 
-    public static double max(double[] array) {
+    public static double max(double[] arrayD) {
 
-        double max = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if (max < array[i])
-                max = array[i];
+        double max = arrayD[0];
+        for (int i = 0; i < arrayD.length; i++) {
+            if (max < arrayD[i])
+                max = arrayD[i];
         }
         return max;
     }
@@ -91,12 +98,12 @@ public class Module2HomeWork1 {
 
     //3 - Находим минимальное значение числа в массиве типа double
 
-    public static double min(double[] array) {
+    public static double min(double[] arrayD) {
 
-        double min = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if (min > array[i])
-                min = array[i];
+        double min = arrayD[0];
+        for (int i = 0; i < arrayD.length; i++) {
+            if (min > arrayD[i])
+                min = arrayD[i];
         }
         return min;
     }
@@ -115,12 +122,12 @@ public class Module2HomeWork1 {
 
     //4 - Находим максимальное положительное значение числа в массиве типа double
 
-    public static double maxPositive(double[] array) {
+    public static double maxPositive(double[] arrayD) {
 
-        double maxPositive = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if (maxPositive < array[i] && array[i] > 0)
-                maxPositive = array[i];
+        double maxPositive = arrayD[0];
+        for (int i = 0; i < arrayD.length; i++) {
+            if (maxPositive < arrayD[i] && arrayD[i] > 0)
+                maxPositive = arrayD[i];
         }
         return maxPositive;
     }
@@ -198,11 +205,11 @@ public class Module2HomeWork1 {
 
     //7 - Находим второе наибольшее число в массиве типа double (после того, как первое наибольшее уже найдено)
 
-    public static double secondLargest(double[] array) {
+    public static double secondLargest(double[] arrayD) {
 
         double largest = Integer.MIN_VALUE;
         double secondLargest = Integer.MIN_VALUE;
-        for (double num : array) {
+        for (double num : arrayD) {
             if (num > largest) {
                 secondLargest = largest;
                 largest = num;
