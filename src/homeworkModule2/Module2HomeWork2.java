@@ -16,7 +16,7 @@ public class Module2HomeWork2 {
 
         double balanceAfter = withdrawBalance(500, withdrawal, commission);
 
-        if (balanceAfter >= 0){
+        if (balanceAfter >= 0) {
             System.out.println("OK " + "Balance = " + balanceAfter + " Commission = " + commission);
         }
         if (balanceAfter <= 0) {
