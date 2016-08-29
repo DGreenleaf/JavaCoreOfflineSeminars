@@ -27,7 +27,7 @@ public class Module2HomeWork2 {
         double commissionFinal = commission * withdrawal;
         double outputMoney = 0;
 
-        System.out.println(withdrawal + commissionFinal + outputMoney);
+        System.out.println("OK " + commissionFinal + " " + output(balance, withdrawal, commissionFinal, outputMoney));
     }
 
     static double output(double balance, double commissionFinal, double withdrawal, double outputMoney) {
