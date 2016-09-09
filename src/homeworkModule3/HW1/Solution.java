@@ -13,13 +13,16 @@ package homeworkModule3.HW1;
         I am Bird
 */
 
-public class Main {
+public class Solution {
 
     public static void main(String[] args) {
 
-        Bird Sparrow = new Bird("I am walking", "I am flying", "I am singing", "I am Bird");
+        Bird bird = new Bird();
 
-        Sparrow.printActions();
+        bird.walk();
+        bird.fly();
+        bird.sing();
+        bird.bird();
 
     }
 
