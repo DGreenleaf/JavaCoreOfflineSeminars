@@ -1,27 +1,19 @@
 package homeworkModule3.HW1;
 
 
-public class Bird {
+public class Bird extends Animal {
 
-    String action1;
-    String action2;
-    String action3;
-    String type;
-
-    protected Bird(String action1, String action2, String action3, String type) {
-        this.action1 = action1;
-        this.action2 = action2;
-        this.action3 = action3;
-        this.type = type;
+    void fly() {
+        System.out.println("I am flying");
     }
 
-    void printActions () {
-
-        System.out.println(action1);
-        System.out.println(action2);
-        System.out.println(action3);
-        System.out.println(type);
+    void sing() {
+        System.out.println("I am singing");
     }
 
-
+    void bird() {
+        System.out.println("I am Bird");
+    }
 }
+
+
