@@ -1,7 +1,11 @@
 package homeworkModule5.stage5;
 
-/**
- * Created by Sergiy on 9/18/16.
- */
+
 public interface DAO {
+
+    Room save(Room room);
+    boolean delete(Room room);
+    Room update(Room room);
+    Room findById(long id);
+    Room[] getAll();
 }
