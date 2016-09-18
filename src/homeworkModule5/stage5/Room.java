@@ -1,4 +1,4 @@
-package homeworkModule5.stage1;
+package homeworkModule5.stage5;
 
 
 import java.util.Date;
@@ -71,5 +71,5 @@ public class Room {
         this.cityName = cityName;
     }
 
-
+    
 }
