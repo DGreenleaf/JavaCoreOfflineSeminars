@@ -18,7 +18,7 @@ Create three constructors: two the same as in CollegeStudend and one with secret
 
 Create getters and setters for all fields and make fields private as OOP principle follows.
 Create 5 objects Course class. Create objects of others classes using every constructor.
-You must have 13 objects in Solution class.
+You must have 13 objects in Main class.
  */
 
 import java.util.Date;
@@ -45,9 +45,6 @@ public class Solution {
         Course sergTeach = new Course("Sergii", 10, "Anrew");
         Course olegTeach = new Course("Oleg", 16, "Anrew");
         Course vladTeach = new Course("Vlad", 8, "Anrew");
-
-
-
 
     }
 
