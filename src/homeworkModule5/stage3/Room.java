@@ -21,6 +21,7 @@ public class Room {
         this.cityName = cityName;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -28,17 +29,21 @@ public class Room {
 
         Room room = (Room) o;
 
-        return (this.price == room.getPrice()
-                && this.persons == room.getPersons()
-                && this.cityName.equals(room.getCityName()));
+        if (price != room.price) return false;
+        if (persons != room.persons) return false;
+        return cityName.equals(room.cityName);
 
     }
 
+
     @Override
     public int hashCode() {
-        int result = price;
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + price;
         result = 31 * result + persons;
-        result = 31 * result + (cityName != null ? cityName.hashCode() : 0);
+        result = 31 * result + dateAvailableFrom.hashCode();
+        result = 31 * result + hotelName.hashCode();
+        result = 31 * result + cityName.hashCode();
         return result;
     }
 

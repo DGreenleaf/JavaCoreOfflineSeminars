@@ -1,4 +1,4 @@
-package homeworkModule5.stage4;
+package homeworkModule5.stage7;
 
 
 import java.util.Date;
@@ -31,6 +31,7 @@ public class Room {
 
         if (price != room.price) return false;
         if (persons != room.persons) return false;
+
         return cityName.equals(room.cityName);
 
     }

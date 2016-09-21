@@ -1,4 +1,4 @@
-package homeworkModule5.stage4;
+package homeworkModule5.stage7;
 
 
 import java.util.Date;
@@ -25,12 +25,24 @@ public class TripAdvisorAPI implements API {
 
     @Override
     public Room[] findRooms(int price, int persons, String city, String hotel) {
-        return null;
-    }
+        Room[] foundroomsTemp =new Room[100];
+        int count =0;
+        for ( Room room : rooms){
+            if ((room.getPrice() == price) && (room.getPersons()==persons)&& (room.getCityName().equals(city)&& (room.getHotelName().equals(hotel)))){
+                foundroomsTemp[count]=room;
+                count++;
+            }
+        }
+        Room[] foundroomsarray = new Room[count];
+        for (int i=0; i<count; i++){
+            foundroomsarray[i]=foundroomsTemp[i];
+        }
 
+        return foundroomsarray;
+    }
     @Override
     public Room[] getAll() {
-        return new Room[0];
+        return rooms;
     }
 }
 
