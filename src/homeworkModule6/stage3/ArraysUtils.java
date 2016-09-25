@@ -1,4 +1,4 @@
-package homeworkModule6.stage2;
+package homeworkModule6.stage3;
 
 //You need to create two classes ArraysUtils and UserUtils with static and final methods
 // and use ArraysUtils methods in HW2 to symplify it.
@@ -21,7 +21,7 @@ package homeworkModule6.stage2;
 //        int[] findEvenElements(int[] array)
 
 
-public class ArraysUtils {
+public final class ArraysUtils {
 
     //1 - Просчитываем сумму элементов массива типа int
 
