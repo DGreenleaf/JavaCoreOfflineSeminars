@@ -1,4 +1,5 @@
-package homeworkModule7.stage1;
+package homeworkModule7.stage2;
+
 
 import java.util.Currency;
 
@@ -10,11 +11,12 @@ import java.util.Currency;
  String shopIdentificator
  User user
  */
+
 public class Order {
 
     private long id;
     private int price;
-    private Currency currency;
+    Currency currency;
     private String itemName;
     private String shopIdentificator;
     private User user;
@@ -114,6 +116,4 @@ public class Order {
         result = 31 * result + user.hashCode();
         return result;
     }
-
-
 }
