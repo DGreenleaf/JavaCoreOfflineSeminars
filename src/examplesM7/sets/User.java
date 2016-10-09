@@ -1,7 +1,7 @@
 package examplesM7.sets;
 
 
-public class User implements Comparable<String> {
+public class User implements Comparable<User> {
 
     private String name;
     private int age;
@@ -12,8 +12,18 @@ public class User implements Comparable<String> {
     }
 
     @Override
-    public int compareTo(String o) {
-        return 0;
+    public int compareTo(User user) {
+
+        //int pozvolit sravnit ne tolko quals objectov no i poryadok v kotorm oni doljni idti
+        //-1 if User current < User o
+        //0 if quals
+        //1 if User current > User o
+
+        if (name.equals(user.name) && age - user.age < 0) return -1;
+        if (name.equals(user.name) && age - user.age > 0) return 1;
+        if (name.equals(user.name) && age - user.age == 0) return 0;
+
+        return name.length() - user.getName().length();
     }
 
     @Override
@@ -41,5 +51,21 @@ public class User implements Comparable<String> {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
