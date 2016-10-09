@@ -5,5 +5,6 @@ package homeworkModule7.stage2;
  */
 public enum Currency {
     USD,
-    EUR
+    EUR,
+    UAH
 }

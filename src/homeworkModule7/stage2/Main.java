@@ -67,14 +67,14 @@ public class Main {
 
 
         Order ord1 = new Order(12324, 100, Currency.EUR, "Icecream", "Kishenya", user1);
-        Order ord2 = new Order(234, 100, Currency.EUR, "Ball", "Wallmart", user2);
+        Order ord2 = new Order(234, 100, Currency.UAH, "Ball", "Wallmart", user2);
         Order ord3 = new Order(234234, 200, Currency.EUR, "Axe", "Auchan", user3);
-        Order ord4 = new Order(43634, 600, Currency.EUR, "Furshet", "Kishenya", user4);
+        Order ord4 = new Order(43634, 600, Currency.UAH, "Cat", "Kishenya", user4);
         Order ord5 = new Order(223, 10, Currency.EUR, "Spoon", "Domik", user5);
         Order ord6 = new Order(5, 5, Currency.EUR, "Table", "Larek", user6);
-        Order ord7 = new Order(2323, 220, Currency.EUR, "Cell Phone", "Citrus", user7);
-        Order ord8 = new Order(22333, 33, Currency.EUR, "Cat", "Fora", user8);
-        Order ord9 = new Order(64356, 100, Currency.EUR, "PC", "TamTam", user9);
+        Order ord7 = new Order(2323, 220, Currency.UAH, "Cell Phone", "Citrus", user7);
+        Order ord8 = new Order(22333, 33, Currency.EUR, "Cat", "Kishenya", user8);
+        Order ord9 = new Order(64356, 100, Currency.UAH, "PC", "TamTam", user9);
         Order ord10 = new Order(6566, 1, Currency.EUR, "Magazine", "BookWar", user10);
 
         List<Order> orderList = new ArrayList<Order>();
@@ -101,21 +101,54 @@ public class Main {
 
         System.out.println(orderList);
 
-        // Sorting
+//Sorting
         Collections.sort(orderList, new Comparator<Order>() {
             @Override
-            public int compare(Order order1, Order order2) {
+            public int compare(Order o1, Order o2) {
 
-            int priceComparison = order1.getPrice().compareTo(order2.getPrice());
-            return priceComparison == 0 ? order1.getUser().compareTo(order2.getUser()) : priceComparison;
-
+                int result = Integer.compare(o1.getPrice(), o2.getPrice());
+                if (result == 0) {
+                    String city1 = o1.getUser().getCity();
+                    String city2 = o2.getUser().getCity();
+                    result = city1.compareTo(city2);
+                }
+                return result;
             }
         });
 
+        System.out.println(orderList);
+
+//sort list by Order itemName AND ShopIdentificator AND User city
+
+        Collections.sort(orderList, new Comparator<Order>() {
+            @Override
+            public int compare(Order o1, Order o2) {
+
+                String item1 = o1.getItemName();
+                String item2 = o2.getItemName();
+
+                int result = item1.compareTo(item2);
+//sravnivaem po nazvaniyu magazina esli tovari ravni
+                if (result == 0) {
+
+                    String shop1 = o1.getShopIdentificator();
+                    String shop2 = o2.getShopIdentificator();
+
+                    int result2 = shop1.compareTo(shop2);
+                    //sravnivaem po city Usera esli magazini ravni
+                    if (result2 == 0) {
+
+                        String city1 = o1.getUser().getCity();
+                        String city2 = o2.getUser().getCity();
+
+                        int result3 = city1.compareTo(city2);
+
+                    }
+                }
+                return result;
+            }
+        });
 
         System.out.println(orderList);
     }
-
-
-
 }
