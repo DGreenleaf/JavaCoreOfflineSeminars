@@ -88,7 +88,7 @@ public class Controller {
     public ArrayList<Room> requestRooms(int price, int persons, String city, String hotel) {
 
         ArrayList<Room> foundRooms = new ArrayList<>();
-        for (API item : apis) {
+        for (API item : apiArrayList) {
             foundRooms.addAll(item.findRooms(price, persons, city, hotel));
         }
 

@@ -1,8 +1,6 @@
 package homeworkModule7.stage3;
 
-import java.util.Iterator;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Main {
 
@@ -72,6 +70,7 @@ public class Main {
         }
         return false;
     }
+
 
     private static void deletingUsersWithUsdCurrency(Set<Order> set) {
         Iterator<Order> iterator = set.iterator();

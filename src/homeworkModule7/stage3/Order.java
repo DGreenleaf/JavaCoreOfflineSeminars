@@ -12,7 +12,7 @@ package homeworkModule7.stage3;
  User user
  */
 
-public class Order {
+public class Order implements Comparable<Order>{
 
     private long id;
     private int price;
@@ -28,6 +28,11 @@ public class Order {
         this.itemName = itemName;
         this.shopIdentificator = shopIdentificator;
         this.user = user;
+    }
+
+    @Override
+    public int compareTo(Order o) {
+        return price-o.getPrice();
     }
 
     public long getId() {

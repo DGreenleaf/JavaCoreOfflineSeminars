@@ -33,7 +33,7 @@ public class BookingComAPI implements API {
 
 
     @Override
-    public ArrayList<Room> getAll() {
+    public ArrayList<Room> getAllRooms() {
         return rooms;
     }
 

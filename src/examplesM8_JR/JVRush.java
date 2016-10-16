@@ -1,4 +1,4 @@
-package examplesM8;
+package examplesM8_JR;
 
 /**
  * Created by Sergiy on 10/7/16.

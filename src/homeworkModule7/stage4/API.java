@@ -7,6 +7,6 @@ public interface API {
 
     ArrayList<Room> findRooms(int price, int persons, String city, String hotel);
 
-    ArrayList<Room> getAll();
+    ArrayList<Room> getAllRooms();
 
 }

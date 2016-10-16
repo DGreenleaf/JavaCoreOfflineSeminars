@@ -32,7 +32,7 @@ public class GoogleAPI implements API {
     }
 
     @Override
-    public ArrayList<Room> getAll() {
+    public ArrayList<Room> getAllRooms() {
         return rooms;
     }
 }
