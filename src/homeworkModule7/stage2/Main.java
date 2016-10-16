@@ -1,38 +1,5 @@
 package homeworkModule7.stage2;
 
-/*
-
-Class User class that should contain fields
-
-    long id
-    String firstName
-    String lastName
-    String city
-    int balance
-
-    Class Order:
-
-    long id
-    int price
-    Currency currency
-    String itemName
-    String shopIdentificator
-    User user
-
-
- Create Main class where you create 10 Orders with 10 Users and put it to the List
-
- - sort list by Order price in decrease order
- - sort list by Order price in increase order AND User city
- - sort list by Order itemName AND ShopIdentificator AND User city
-
- - delete duplicates from the list
- - delete items where price less than 1500
- - separate list for two list - orders in USD and UAH
- - separate list for as many lists as many unique cities are in User
- */
-
-
 import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.util.*;
@@ -57,8 +24,6 @@ public class Main {
 //        userList.add(user10);
 
         //1. Creating new orders
-
-        //private static void
 
         User user1 = new User(20, "Drone-1", "Boo", "New York", 100000);
         Order ord1 = new Order(12324, 100, Currency.USD, "Icecream", "Kishenya", user1);
@@ -239,9 +204,6 @@ public class Main {
         }
 
     }
-
-
-
 
     private static void separateListByMultiplyingByUniqueCities(List<Order> orderList) {
 
