@@ -102,6 +102,7 @@ public class Main {
         separateListByMultiplyingByUniqueCities(orderList);
 
 
+
     }
 
     private static void sortedOrderListByPriceDesc(List orderList) {
@@ -207,7 +208,7 @@ public class Main {
 
     private static void separateListByMultiplyingByUniqueCities(List<Order> orderList) {
 
-        List<List<Order>> listOfOrders = new ArrayList<>();
+
         Set<String> listUniqueByCity = new LinkedHashSet<>();
 
         for (Order order : orderList) {
@@ -225,6 +226,8 @@ public class Main {
             }
             ordersByCity.add(ordersForCity);
         }
+
+        System.out.println();
 
     }
 }
