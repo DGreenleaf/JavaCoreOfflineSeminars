@@ -39,7 +39,7 @@ public class MapMediumExample {
 
         List<Solution> solutions = new ArrayList<>();
 
-        //update task
+        //update Task
 
         task.setSolutions(solutions);
     }
