@@ -2,8 +2,12 @@ package homeworkModule10.stage4;
 
 import homeworkModule10.stage2.MyException;
 
-/**
- * Created by Sergiy on 10/31/16.
+/*
+ Create a class with two methods, f( ) and g( ).
+ In g( ), throw an exception of a new type that you define.
+ In f( ), call g( ), catch its exception and, in the catch clause,
+ throw a different exception (of a second type that you define).
+ Test your code in main( ).
  */
 public class ExceptionT4 {
 
@@ -12,16 +16,18 @@ public class ExceptionT4 {
         f();
     }
 
-    private static void f() {
-        try {
-            g();
-        } catch (Throwable e) {
-            System.err.println(e.getMessage());
-        }
-    }
-
     private static void g() throws MyException {
         throw new MyException("Wrong action");
     }
+
+    private static void f() {
+        try {
+            g();
+        } catch (MyException e) {
+            throw new ClassCastException(e.getMessage());
+        }
+    }
 }
+
+
 
