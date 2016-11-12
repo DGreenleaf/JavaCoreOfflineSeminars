@@ -1,8 +1,12 @@
 package homeworkModule10.stage1;
 
-/**
- * Created by Sergiy on 10/30/16.
+/*
+ Create a class with a main( ) that throws an object of class Exception inside a try block.
+ Give the constructor for Exception a String argument.
+ Catch the exception inside a catch clause and print the String argument.
+ Add a finally clause and print a message to prove you were there.
  */
+
 public class ExceptionTask {
 
     public static void main(String[] args) throws Exception {
@@ -12,12 +16,14 @@ public class ExceptionTask {
         try {
             throw new Exception(a);
 
-        } catch (Throwable t) {
+        } catch (Throwable e) {
+            System.out.println(e.getMessage());
 
-            System.err.println(a);
+        } finally {
+            System.out.println("Finally done");
+
         }
-
-        System.out.println("Finally done");
     }
 }
+
 

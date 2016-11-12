@@ -5,6 +5,27 @@ package homeworkModule9.stage1;
  */
 
 
+//User class structure from HW module 7 (User and Order) and complete tasks using Java 8 instruments
+//
+//        - sort list by Order price in decrease order
+//        - sort list by Order price in increase order AND User city
+//        - sort list by Order itemName AND ShopIdentificator AND User city
+//
+//        - delete duplicates from the list
+//        - delete items where price less than 1500
+//        - separate list for two list - orders in USD and UAH
+//        - separate list for as many lists as many unique cities are in User
+//
+//        - check if set contain Order where User’s lastName is - “Petrov”
+//        - delete orders where currency is USD
+//
+//        Restrictions:
+//        - you can’t use iterator
+//        - you can’t use loops
+//
+//        Put every subtask to a separate method. Create Main class and test every method with test data.
+
+
 import homeworkModule7.stage2.Currency;
 import homeworkModule6.stage5.UserUtils;
 import homeworkModule7.stage2.*;
@@ -62,7 +83,7 @@ public class Main {
         System.out.println(k + " =========================================================================\n");
         k++;
 
-        Comparator<Order> price = (o1, o2) -> o2.getPrice() - o1.getPrice();
+        Comparator<Order> price = (o1, o2) -> o1.getPrice() - o2.getPrice();
 
         Comparator<Order> priceAndCity = (o1, o2) -> {
             if (o1.getPrice() == o2.getPrice()) {
@@ -102,7 +123,7 @@ public class Main {
         hashList.addAll(listOfOrder);
         List<Order> list1 = new ArrayList<>();
         list1.addAll(hashList);
-        list1.removeIf(x -> (x.getPrice() < 150));//не 1500 потому что иначе масив будет пуст
+        list1.removeIf(x -> (x.getPrice() < 150));//не 1500 потому что иначе массив будет пуст
         str(list1);
 
         List<Order> list2 = list1.stream().filter(o -> o.getCurrency() != Currency.USD).collect(Collectors.toList());
