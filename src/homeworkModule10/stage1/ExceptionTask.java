@@ -16,7 +16,7 @@ public class ExceptionTask {
         try {
             throw new Exception(a);
 
-        } catch (Throwable e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
 
         } finally {
