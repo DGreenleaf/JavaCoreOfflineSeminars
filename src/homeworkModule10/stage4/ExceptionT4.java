@@ -20,7 +20,7 @@ public class ExceptionT4 {
         throw new MyException("Wrong action");
     }
 
-    private static void f() {
+    private static void f() throws ClassCastException{
         try {
             g();
         } catch (MyException e) {
